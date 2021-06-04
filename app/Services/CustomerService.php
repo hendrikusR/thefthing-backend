@@ -45,6 +45,9 @@ class CustomerService {
         $data = [];
         $customer = Customer::find($id);
 
+        $customer['gender_text'] = $customer['gender'] == 1 ? 'Laki-Laki' : 'Perempuan';
+        $customer['marital_text'] = $customer['is_married'] == 1 ? 'Menikah' : 'Single';
+
         return response()->json([
             'status' => [
                 'code' => 200,
@@ -87,7 +90,7 @@ class CustomerService {
                     ],422);
                 } 
 
-                if(!empty($request['password'])) {
+                if(isset($request['password'])) {
                     $request['password'] = app('hash')->make($request['password']);
                 }
 
