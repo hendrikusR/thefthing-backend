@@ -6,5 +6,5 @@
 - POST - http://localhost:5000/customer/store
 - GET - http://localhost:5000/customer
 - GET - http://localhost:5000/customer/edit/{id}
-- POST - http://localhost:5000/customer/update/{id}
+- POST - http://localhost:5000/customer/{id}/update
 - POST - http://localhost:5000/{id}/delete
