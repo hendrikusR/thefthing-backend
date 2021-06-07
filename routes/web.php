@@ -21,7 +21,7 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'customer'], function () use ($router) {
     $router->get('/', ['as' => 'customer', 'uses' => 'CustomerController@index']);
     $router->get('/edit/{id}', ['as' => 'customer', 'uses' => 'CustomerController@edit']);
-    $router->post('/update/{id}', ['as' => 'customer', 'uses' => 'CustomerController@update']);
+    $router->post('/{id}/update', ['as' => 'customer', 'uses' => 'CustomerController@update']);
     $router->post('/store', ['as' => 'customer-store', 'uses' => 'CustomerController@store']);
     $router->post('/{id}/delete', ['as' => 'customer-delete', 'uses' => 'CustomerController@destroy']);
 });
