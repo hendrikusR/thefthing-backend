@@ -8,3 +8,6 @@
 - GET - http://localhost:5000/customer/edit/{id}
 - POST - http://localhost:5000/customer/{id}/update
 - POST - http://localhost:5000/{id}/delete
+
+
+file sql ada di repository ini https://github.com/hendrikusR/thefthing-docker
